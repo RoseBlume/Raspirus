@@ -13,13 +13,15 @@ RUN apt-get update && apt-get install -y build-essential \
                                            libxdo-dev \
                                            libayatana-appindicator3-dev \
                                            librsvg2-dev \
-                                           gcc-aarch64-linux-gnu
+                                           gcc-aarch64-linux-gnu \
+                                           libssl-dev \
+                                           libwebkit2gtk-4.1:arm64
 
 
 # Add architecture
 RUN dpkg --add-architecture arm64
 RUN apt-get -qq update
-RUN apt-get -qq install -y libwebkit2gtk-4.1-dev:arm64 libssl-dev:arm64
+RUN apt-get -qq install -y libwebkit2gtk-4.1:arm64 libssl-dev:arm64
 
 # Add Rust target
 RUN rustup target add aarch64-unknown-linux-gnu
