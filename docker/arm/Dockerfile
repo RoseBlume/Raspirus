@@ -6,13 +6,11 @@ COPY . .
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get clean && apt-get update && apt-get upgrade -y
-RUN apt-get update && apt-get install -y libwebkit2gtk-4.1-dev \
-                                           build-essential \
+RUN apt-get update && apt-get install -y build-essential \
                                            curl \
                                            wget \
                                            file \
                                            libxdo-dev \
-                                           libssl-dev \
                                            libayatana-appindicator3-dev \
                                            librsvg2-dev \
                                            gcc-aarch64-linux-gnu
