@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y build-essential \
                                            librsvg2-dev \
                                            gcc-aarch64-linux-gnu \
                                            libssl-dev \
-                                           libwebkit2gtk-4.1:arm64
+                                           libwebkit2gtk-4.1
 
 
 # Add architecture
